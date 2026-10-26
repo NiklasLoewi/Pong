@@ -1,0 +1,37 @@
+.canvas{
+    background-color: black; 
+}
+button{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    z-index: 11;
+    border-radius: 3px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.button-box{
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    flex-direction: column;
+}
+.game-over{
+    display: flex;
+    color: red;
+}
+.grün{
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+.leinwand-container{
+    display: flex;
+    width: 720px;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}

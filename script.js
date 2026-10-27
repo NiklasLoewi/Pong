@@ -1,6 +1,8 @@
 let ca = document.getElementById("canvas");
 let ctx = ca.getContext('2d');
 
+let score = 0;
+
 let player1 = 200;
 let player2 = 200;
 let ball = {
@@ -36,9 +38,9 @@ function loop(){
     let player2Mitte = player2 + 40;
 
     if(ballMitte < player2Mitte - 5){
-        player2 -= 3;
+        player2 -= 4;
     }else if(ballMitte > player2Mitte +5){
-        player2 += 3;
+        player2 += 4;
     }
 
     player1 = Math.max(0, Math.min(player1, 400));
@@ -58,6 +60,8 @@ function loop(){
         ball.speedX += 0.1;
         ball.speedX = Math.min(10, ball.speedX);
         abprallenVonSpieler(player1);
+        score += 1;
+        document.getElementById("score").textContent = score;   
     }
     if (
         ball.speedX > 0 &&
@@ -89,6 +93,10 @@ function loop(){
             speedX: 3,
             speedY: -2,
         }
+        player1 = 200 ;
+        player2 = 200;
+        score = 0;
+        document.getElementById("score").textContent = score;
         clearInterval(startIntervall);
         document.getElementById("play").style.display = "flex";
         document.getElementById("gameover").style.display = "flex";

@@ -10,6 +10,7 @@
 
 body {
   font-family: "Press Start 2P", sans-serif;
+  background-color: blue;
 }
 
 button{
@@ -56,4 +57,16 @@ button{
     position: absolute;
     top: 0;
     color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+.score p{
+    margin: 0px;
+}
+.score-row{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
